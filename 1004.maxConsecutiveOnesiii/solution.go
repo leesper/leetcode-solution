@@ -18,10 +18,8 @@ func longestOnes(nums []int, k int) int {
 			max = right - left
 		}
 
-		for timesOfZero >= k {
-			if right >= len(nums) || nums[right] == 1 {
-				break
-			} else if nums[left] == 0 {
+		for timesOfZero > k {
+			if nums[left] == 0 {
 				timesOfZero--
 			}
 			left++
